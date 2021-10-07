@@ -8,7 +8,9 @@ sudo apt update
 sudo apt install -y ansible
 sudo apt install -y openjdk-11-jdk
 sudo apt install -y jenkins
+sudo systemctl enable jenkins
 sudo systemctl start jenkins
+echo "Waiting for Jenkins to start up..."
+sleep 60
 echo "The Jenkins initial Admin Password is:"
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-
